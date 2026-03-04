@@ -34,7 +34,7 @@ jobs:
 
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: demo-dist
+          path: demo/dist
 
   deploy:
     needs: build
