@@ -45,7 +45,9 @@ export const Snow: FC<SnowProps> = ({ config = {}, className, style }) => {
       ...config,
       size: { ...DEFAULT_CONFIG.size, ...config.size },
       speed: { ...DEFAULT_CONFIG.speed, ...config.speed },
-      opacity: { ...DEFAULT_CONFIG.opacity, ...config.opacity },
+      opacity: config.opacity
+        ? { ...DEFAULT_CONFIG.opacity, ...config.opacity }
+        : DEFAULT_CONFIG.opacity,
       swing: config.swing
         ? { ...DEFAULT_CONFIG.swing, ...config.swing }
         : DEFAULT_CONFIG.swing,
